@@ -6,6 +6,7 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
 
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -39,6 +40,13 @@ module.exports = {
     }),
 
   ],
+  externals: {
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'axios': 'axios',
+    'jquery': '$',
+    'vue-resource': 'VueResource'
+  },
 
   module: {
     rules: [
