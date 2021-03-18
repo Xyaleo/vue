@@ -8,6 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import VueResource from 'vue-resource'
 import './assets/iconfont.css'
 import $ from 'jquery'
+import store from './vuex/store' // 引入store
 
 Vue.use(VueResource)
 Vue.config.productionTip = false
