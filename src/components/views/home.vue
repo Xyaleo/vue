@@ -212,7 +212,6 @@
         request.post('/api/goArticle/all').then(res=>{
           if(res.data.sta === 'no') {
             window.localStorage.removeItem('name');
-            alert("账号未登录，请重新登陆");
             this.$router.push({
               path: res.data.ur
             })
