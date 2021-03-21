@@ -17,7 +17,6 @@
       <h3>注册</h3>
 
       <p class="tishi" v-show="showTishi">{{tishi}}</p>
-
         <label class="a1">用&nbsp;&nbsp;户&nbsp;名:</label>
       <input class="a2" type="text" placeholder="请输入用户名" v-model="newUsername">
         <label class="a3">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;:</label>
@@ -39,7 +38,7 @@
     position:absolute;
     top:0;
     left:0;
-    background: url("../../assets/timg.jpg");
+    background: url("../../assets/timg1.jpg");
     background-size: 100%;
     background-repeat:no-repeat;
   }
