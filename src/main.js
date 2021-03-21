@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 //import Vue from 'vue'
-//const Vue = require('vue')
+const Vue = require('vue')
 //const ElementUI = require('element-ui')
 const axios = require('axios')
 const VueResource = require('vue-resource')
@@ -18,10 +18,8 @@ import store from './vuex/store' // 引入store
 
 
 
-Vue.use(VueResource)
+//Vue.use(VueResource)
 Vue.config.productionTip = false
-//Vue.use(ElementUI);
-/* eslint-disable no-new */
 
 new Vue({
   el: '#app',

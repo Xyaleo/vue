@@ -32,6 +32,7 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+
   plugins: [
     new webpack.ProvidePlugin({
       $:"jquery",
@@ -45,7 +46,8 @@ module.exports = {
     'vue-router': 'VueRouter',
     'axios': 'axios',
     'jquery': '$',
-    'vue-resource': 'VueResource'
+    'vue-resource': 'VueResource',
+    'vuex': 'Vuex'
   },
 
   module: {

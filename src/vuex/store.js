@@ -1,7 +1,5 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
+const Vue = require('vue')
+const Vuex = require('vuex')
 
 const state = {
     count: 0

@@ -132,8 +132,7 @@
 </style>
 
 <script >
-  import {setCookie,getCookie} from '../../assets/js/cookie.js'
-  import request from 'axios';
+  const request = require('axios')
   import crypto from 'crypto';
 
   export default {
