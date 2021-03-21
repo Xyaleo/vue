@@ -39,8 +39,7 @@
     top:0;
     left:0;
     background: url("../../assets/timg1.jpg");
-    background-size: 100%;
-    background-repeat:no-repeat;
+    background-size:cover;
   }
   .register-wrap{text-align:center;
     width:100%;
@@ -48,9 +47,8 @@
     position:absolute;
     top:0;
     left:0;
-    background: url("../../assets/timg.jpg");
-    background-size: 100%;
-    background-repeat:no-repeat;
+    background: url("../../assets/timg1.jpg");
+    background-size:cover
   }
   .a1{
     float:left;
