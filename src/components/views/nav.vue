@@ -47,10 +47,25 @@
     padding: 0;
   }
 
-  p {
-    margin-bottom: 1.75em;
+  #nav1 {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    left:0;
+    background: #ffffff;
+    font-size: 24px;
+    font-family: 幼圆,serif;
+    z-index:9;
+    border-color: #f0f0f0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
   }
-
+  #guide{
+    position: relative;
+    width: 1380px;
+    margin: 0 auto 0 auto;
+  }
   #write {
     float:left;
     background-color: #f45b4d;
@@ -67,6 +82,9 @@
     text-transform: lowercase;
     color: #f3f3f3;
     cursor:pointer;
+  }
+  #write p {
+    margin-bottom: 0;
   }
   #user {
     float:left;
@@ -90,25 +108,7 @@
     text-decoration: none;
     color: #f45b4d;
   }
-  #nav1 {
-    position: fixed;
-    top:0;
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
-    left:0;
-    background: #ffffff;
-    font-size: 24px;
-    font-family: 幼圆,serif;
-    z-index:9;
-    border-color: #f0f0f0;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
-  }
-  #guide{
-    position: relative;
-    width: 1380px;
-    margin: 0 auto 0 auto;
-  }
+
   ul {
     margin-bottom: 1.75em;
   }
@@ -160,7 +160,7 @@
 </style>
 <script>
   /*引入公共方法*/
-  import request from 'axios';
+  const request = require('axios');
   export default{
     props:["name"],
 

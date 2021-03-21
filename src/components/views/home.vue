@@ -35,9 +35,7 @@
               </div>
             </div>
           </div>
-
         </div>
-        <br class="clear"/>
       </div>
       <br class="clear"/>
     </div>
@@ -77,7 +75,6 @@
   }
 
   .con {
-    float: left;
     width:100%
   }
 
@@ -180,8 +177,7 @@
 </style>
 <script>
   /*引入公共方法*/
-  import { getCookie,delCookie } from '../../assets/js/cookie.js'
-  import request from 'axios';
+  const request = require('axios');
   import navVue from '@/components/views/nav'
   import backVue from '@/components/views/backtop'
   export default{

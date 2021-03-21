@@ -4,7 +4,7 @@
       <div class="mask">
       <h3 class="login">登录</h3>
       <p class="tishi" v-show="showTishi">{{tishi}}</p>
-        <label class="a1">用&nbsp;&nbsp;户&nbsp;名:</label>
+        <label class="a1">用&nbsp;&nbsp;户&nbsp;&nbsp;名:</label>
       <input class="a2" type="text" placeholder="请输入用户名" v-model="username">
         <label class="a6">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;:</label>
       <input class="a5" type="password" placeholder="请输入密码" v-model="password">
@@ -17,7 +17,7 @@
       <h3>注册</h3>
 
       <p class="tishi" v-show="showTishi">{{tishi}}</p>
-        <label class="a1">用&nbsp;&nbsp;户&nbsp;名:</label>
+        <label class="a1">用&nbsp;&nbsp;户&nbsp;&nbsp;名:</label>
       <input class="a2" type="text" placeholder="请输入用户名" v-model="newUsername">
         <label class="a3">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;:</label>
       <input class="a2" type="password" placeholder="请输入密码" v-model="newPassword">
@@ -52,7 +52,8 @@
   }
   .a1{
     float:left;
-    margin-left: 40px;
+    float:left;
+    margin-left: 38px;
     margin-top: 7px;
   }
   .a2{
@@ -130,7 +131,7 @@
 </style>
 
 <script >
-  const request = require('axios')
+  const request = require('axios');
   import crypto from 'crypto';
 
   export default {
@@ -148,7 +149,6 @@
       }
     },
     mounted(){
-      /*页面挂载获取cookie，如果存在username的cookie，则跳转到主页，不需登录*/
 
     },
     methods: {

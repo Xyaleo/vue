@@ -25,10 +25,8 @@
           <h1>{{article.title}}</h1>
           <br><br>
           <div id="con" v-html="article.text">
-
           </div>
         </div>
-        <br class="clear"/>
       </div>
       <br class="clear"/>
     </div>
@@ -61,15 +59,6 @@
     margin-bottom: 1.25em;
     font-family: 幼圆;
     color: #000000;
-  }
-
-  img.left {
-    float: left;
-    margin: 8px 20px 20px 0;
-  }
-
-  img.top {
-    margin: 8px 0 20px 0;
   }
 
   p {
@@ -168,8 +157,7 @@
 </style>
 <script>
   /*引入公共方法*/
-  import { getCookie,delCookie } from '../../assets/js/cookie.js'
-  import request from 'axios';
+  const request = require('axios');
   import navVue from '@/components/views/nav'
   import backVue from '@/components/views/backtop'
   export default{
