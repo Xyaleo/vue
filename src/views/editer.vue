@@ -1,4 +1,3 @@
-
 <template>
   <body>
   <div class="xr-editor">

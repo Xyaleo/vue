@@ -38,7 +38,7 @@
     position:absolute;
     top:0;
     left:0;
-    background: url("../../assets/timg1.jpg");
+    background: url("../assets/timg1.jpg");
     background-size:cover;
   }
   .register-wrap{text-align:center;
@@ -47,7 +47,7 @@
     position:absolute;
     top:0;
     left:0;
-    background: url("../../assets/timg1.jpg");
+    background: url("../assets/timg1.jpg");
     background-size:cover
   }
   .a1{
@@ -148,9 +148,7 @@
         newPassword1: ''
       }
     },
-    mounted(){
 
-    },
     methods: {
 
       ToRegister(){
@@ -188,7 +186,7 @@
           this.tishi = "密码长度超过限制";
           this.showTishi = true
         } else {
-          this.showTishi = false
+          this.showTishi = false;
           let  md5 = crypto.createHash("md5");
           md5.update(this.password); //需要加密的密码
           let pwd = md5.digest('hex');  //password 加密完的密码
@@ -236,7 +234,7 @@
           this.tishi = "两次输入的密码不一致";
           this.showTishi = true
         }else{
-          this.showTishi = false
+          this.showTishi = false;
           let  md5 = crypto.createHash("md5");
           md5.update(this.newPassword); //需要加密的密码
           let pwd = md5.digest('hex');  //password 加密完的密码
@@ -246,18 +244,18 @@
           }).then((res)=>{
             // console.log(res)
             if(res.data.code === 1){
-              this.tishi = "注册成功，返回登陆页面"
-              this.showTishi = true
-              this.username = ''
-              this.password = ''
+              this.tishi = "注册成功，返回登陆页面";
+              this.showTishi = true;
+              this.username = '';
+              this.password = '';
               /*注册成功之后再跳回登录页*/
               setTimeout(function(){
-                this.showRegister = false
-                this.showLogin = true
+                this.showRegister = false;
+                this.showLogin = true;
                 this.showTishi = false
               }.bind(this),2000)
             }else{
-              this.tishi = "注册失败，原因：用户名已存在"
+              this.tishi = "注册失败，原因：用户名已存在";
               this.showTishi = true
             }
           })

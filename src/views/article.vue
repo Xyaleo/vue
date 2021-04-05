@@ -12,7 +12,7 @@
       <nav-vue :name="name" ></nav-vue>
     </div>
     <div id="ad">
-      <img src="../../assets/logo1.png" width="1120" height="200" alt="">
+      <img src="../assets/logo1.png" width="1120" height="200" alt="">
     </div>
     <div id="main">
       <div id="sidebar1">
@@ -158,8 +158,8 @@
 <script>
   /*引入公共方法*/
   const request = require('axios');
-  import navVue from '@/components/views/nav'
-  import backVue from '@/components/views/backtop'
+  import navVue from '@/components/nav'
+  import backVue from '@/components/backtop'
   export default{
     data(){
       return{

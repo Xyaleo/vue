@@ -1,8 +1,4 @@
 <template>
-<!--  <div class="text">-->
-<!--    <h3>当前用户： {{name}}</h3>-->
-<!--    <a href="#" @click="quit">退出登录</a>-->
-<!--  </div>-->
   <body>
   <div id="bg" v-if="article!==[] ">
     <div class="top">
@@ -12,7 +8,7 @@
       <nav-vue :name="name"></nav-vue>
     </div>
     <div id="ad">
-      <img src="../../assets/logo1.png" width="1120" height="200" alt="">
+      <img src="../assets/logo1.png" width="1120" height="200" alt="">
     </div>
     <div id="main">
       <div id="sidebar1">
@@ -30,7 +26,7 @@
               <a id="item_title" @click="toArticle(item.id)">{{item.title}}</a>
               <div id="item_info">
                 <div id="item_brief">{{item.brief}}...</div>
-                <div id="item_name">{{item.name}}&nbsp&nbsp&nbsp&nbsp{{item.date}}</div>
+                <div id="item_name">{{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.date}}</div>
                 <p></p>
               </div>
             </div>
@@ -178,8 +174,8 @@
 <script>
   /*引入公共方法*/
   const request = require('axios');
-  import navVue from '@/components/views/nav'
-  import backVue from '@/components/views/backtop'
+  import navVue from '@/components/nav'
+  import backVue from '@/components/backtop'
   export default{
 
     data(){
