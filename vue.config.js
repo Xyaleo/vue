@@ -69,5 +69,6 @@ module.exports = {
             );
         }
         config.plugins = [...config.plugins, ...plugins];
-    }
+    },
+    productionSourceMap: false
 };
