@@ -1,7 +1,3 @@
-const Vue = require('vue');
-const axios = require('axios');
-const $ = require('jquery');
-const Router = require('vue-router');
 import './assets/iconfont.css'
 import { createApp } from 'vue'
 import App from './App.vue'
