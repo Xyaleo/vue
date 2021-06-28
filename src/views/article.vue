@@ -1,15 +1,11 @@
 <template>
-  <!--  <div class="text">-->
-  <!--    <h3>当前用户： {{name}}</h3>-->
-  <!--    <a href="#" @click="quit">退出登录</a>-->
-  <!--  </div>-->
   <body>
-  <div id="bg" v-if="article!==[]">
+  <div id="bg">
     <div class="top">
       <back-vue></back-vue>
     </div>
     <div id="header">
-      <nav-vue :name="name" ></nav-vue>
+      <nav-vue :name="name" page="a1"></nav-vue>
     </div>
     <div id="ad">
       <img src="../assets/logo1.png" width="1120" height="200" alt="">
@@ -135,6 +131,7 @@
     padding: 28px;
     margin: 0 28px 0 274px;
     background: #ffffff;
+    min-height: calc(100vh - 360px);
   }
 
   #sidebar1 {
@@ -192,7 +189,6 @@
         }
 
       });
-      // con.innerHTML=this.article.text;
     },
     methods:{
       getAllArticles:function(){
@@ -201,12 +197,6 @@
           url:'/api/getData/all'
         }).then(res=>{
           this.article = res.data;
-        })
-      },
-
-      write(){
-        this.$router.push({
-          path: `/editer`
         })
       }
     }

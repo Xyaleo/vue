@@ -4,7 +4,7 @@ import Login from '@/views/login.vue'
 import Home from '@/views/home.vue'
 import Article from '@/views/article.vue'
 import Editer from '@/views/editer.vue'
-
+import About from '@/views/about.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -45,7 +45,16 @@ const routes: Array<RouteRecordRaw> = [
       // 页面标题title
       title: '文章'
     }
-  }
+  },
+    {
+    path:'/about',
+    name:'About',
+    component:About,
+    meta: {
+        // 页面标题title
+        title: '关于'
+    }
+    }
 ];
 
 const router = createRouter({

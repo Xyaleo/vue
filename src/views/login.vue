@@ -236,7 +236,7 @@
               this.load_visible = false;
               window.localStorage.setItem('name',this.username);
               setTimeout(function () {
-                this.$router.push('/home')
+                this.$router.push('home')
               }.bind(this), 2000)
             }
           })

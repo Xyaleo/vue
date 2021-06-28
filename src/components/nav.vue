@@ -1,29 +1,24 @@
 <template>
-    <!--      <div id="tit">-->
-    <!--        <h1>-->
-    <!--          <a>Leo's Blog</a>-->
-    <!--        </h1>-->
-    <!--      </div>-->
     <div id="nav1" >
       <div id="guide">
         <div id="tit">
           🍊 博客
         </div>
-        <ul id="gui">
-          <li class="active">
-            <a href="#/home">博客</a>
+        <ul id="gui" @click="clicknav">
+          <li>
+            <a href="#/home" id="a1">博客</a>
           </li>
           <li>
-            <a href="#">相册</a>
+            <a >相册</a>
           </li>
           <li>
-            <a href="#">论坛</a>
+            <a >论坛</a>
           </li>
           <li>
-            <a href="#">专题</a>
+            <a >专题</a>
           </li>
           <li>
-            <a href="#">关于</a>
+            <a href="#/about" id="a2">关于</a>
           </li>
         </ul>
         <div id="write" @click="write">
@@ -39,7 +34,6 @@
       </div>
     </div>
   </template>
-
 <style scoped>
 
   * {
@@ -143,7 +137,7 @@
     font-weight:bold;
   }
 
-  #nav1 ul li.active a {
+  #nav1 ul li .active{
     color: #f45b4d;
   }
   #tit {
@@ -162,8 +156,14 @@
   /*引入公共方法*/
   const request = require('axios');
   export default{
-    props:["name"],
-
+    props:["name","page"],
+    data(){
+      return{
+      }
+    },
+    mounted(){
+        document.getElementById(this.page).classList.add("active");
+    },
     methods:{
       quit1(){
         request.get('/api/goLogout').then(res=>{
@@ -173,6 +173,7 @@
           })
         });
       },
+
       write(){
         this.$router.push({
           path: `/editer`

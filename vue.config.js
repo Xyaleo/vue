@@ -1,6 +1,5 @@
 const path = require('path');
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
-
 const IS_PROD = ["production", "prod"].includes(process.env.NODE_ENV);
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;
 
@@ -46,16 +45,20 @@ module.exports = {
             }
         },
     },
-    configureWebpack:{
-        externals: {
+    chainWebpack: config => {
+        config
+            .plugin('webpack-bundle-analyzer')
+            .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
+    },
+
+    configureWebpack: config => {
+        config.externals = {
             vue: 'Vue',
             'vue-router': 'VueRouter',
             axios: 'axios',
             'jquery': '$',
             vuex: 'Vuex'
-        }
-    },
-    configureWebpack: config => {
+        };
         const plugins = [];
         if (IS_PROD) {
             plugins.push(

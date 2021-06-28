@@ -11,7 +11,7 @@
         <span></span>
         <span></span>
       </div>
-      <p>{{ text }}</p>
+      <p>加载中···</p>
     </div>
   </div>
 </template>>
@@ -31,7 +31,7 @@
   .zh-loading span:nth-child(8){bottom:14px;left:14px;-webkit-animation-delay:1.04s}
   .zh-loading-box{position: absolute;z-index: 999;height: 100%;width: 100%;top:0;left:0;}
   .zh-loading-box .zh-loading-inner{position: absolute;z-index: 2;left: 50%;top: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);}
-  .zh-loading-box .zh-loading-inner p{color: #666;text-align: center;}
+  .zh-loading-box .zh-loading-inner p{color: #41b883;text-align: center;}
 
 </style>
 
